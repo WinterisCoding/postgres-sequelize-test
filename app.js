@@ -13,6 +13,9 @@ const app = express();
 
 app.get('/', (req, res) => res.send('INDEX'));
 
+// routes
+app.use('/enemies', require('./routes/enemies'))
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
